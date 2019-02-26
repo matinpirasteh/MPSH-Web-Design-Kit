@@ -1,0 +1,80 @@
+@-webkit-keyframes autofill {
+    to {
+        background-color: transparent;
+        background-image: linear-gradient(to top,#304890 2px,rgba(156,39,176,0) 2px),linear-gradient(to top,#d2d2d2 1px,rgba(210,210,210,0) 1px);
+    }
+}
+
+.mpsh-form-group input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+    content: "\feff";
+}
+
+.mpsh-form-group{
+    position: relative;
+    text-align: right;
+}
+
+.mpsh-form-group.floating-label{
+    margin: 25px 0 0;
+}
+
+    .mpsh-form-group.floating-label label {
+        position: absolute;
+        top: 0;
+        transform: translateY(8px);
+        font-size: 14px;
+        transition: 0.3s;
+        color: #888;
+        cursor: text;
+    }
+
+    .mpsh-form-group input,
+    .mpsh-form-group textarea {
+        background-color: transparent;
+        border: none;
+        background: right bottom no-repeat,right calc(100% - 1px);
+        background-size: auto auto, auto auto;
+        background-image: linear-gradient(to top,#304890 2px,rgba(156,39,176,0) 2px),linear-gradient(to top,#d2d2d2 1px,rgba(210,210,210,0) 1px);
+        background-size: 0 100%,100% 100%;
+        transition: 0.3s;
+        padding: 3px 0;
+        width: 100%;
+        height: 36px;
+        display: block;
+        font-size: 14px;
+    }
+
+    .mpsh-form-group.highlight-center input,
+    .mpsh-form-group.highlight-center textarea {
+        background: right bottom no-repeat,right calc(100% - 1px);
+    }
+    .mpsh-form-group.highlight-right input,
+    .mpsh-form-group.highlight-right textarea {
+        background: center bottom no-repeat,center calc(100% - 1px);
+    }
+    .mpsh-form-group.highlight-left input,
+    .mpsh-form-group.highlight-left textarea {
+        background: left bottom no-repeat,left calc(100% - 1px);
+    }
+
+    .mpsh-form-group.floating-label.is-filled label,
+    .mpsh-form-group.floating-label.is-focused label {
+        transform: translateY(-90%);
+        font-size: 12px;
+    }
+
+    .mpsh-form-group.floating-label.is-filled input,
+    .mpsh-form-group.floating-label.is-focused input,
+    .mpsh-form-group.floating-label.is-filled textarea,
+    .mpsh-form-group.floating-label.is-focused textarea {
+        background-size: 100% 100%,100% 100%;
+        box-shadow: none;
+    }
+
+    .mpsh-form-group.is-filled .form-control {
+        transition:0 !important;
+        border-bottom: 2.5px solid #304890 !important;
+        background-image: none !important;
+    }
